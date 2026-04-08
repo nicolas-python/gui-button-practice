@@ -1,13 +1,16 @@
-import tkinter
+import tkinter                      # importiert tkinter
 
-root = tkinter.Tk()
-root.title("Button Test")
-root.geometry("400x300")
+def click():
+    print("clicked")
 
-button1= tkinter.Button(root, text="Button 1")
-button1.pack()
+root = tkinter.Tk()                 #erstellt das hauptfenster
+root.title("Button Test")           #fenstertitel
+root.geometry("400x300")            #fenstergröße
 
-button2= tkinter.Button(root, text="Button 2")
+button1= tkinter.Button(root, text="Button 1",command=click)   #erstellt button
+button1.pack()                                                  #zeigt den button an
+
+button2= tkinter.Button(root, text="Button 2",command=click)   #command = sagt diese funktion ausführen
 button2.pack()
 
-root.mainloop()
+root.mainloop()                     #startet die schleife

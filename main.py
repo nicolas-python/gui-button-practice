@@ -4,7 +4,10 @@ def click():
     print("clicked")
 
 def change_text():
-    button.config(text="Geklickt!")
+    button_text.config(text="Geklickt!")
+
+def change_color():
+    button_color.config(bg="red")  #Hintergrundfarbe auf Rot ändern (bg = Background fg=foreground
 
 root = tkinter.Tk()                 #erstellt das hauptfenster
 root.title("Button Test")           #fenstertitel
@@ -31,7 +34,11 @@ button5= tkinter.Button(root, text="Button 5", command=click)         #pack und 
 button5.pack(expand=True,anchor="sw")                                  #expand=True =pack dehnt sich und verteil den freien raum
 
 #knöpfe Text ändern
-button = tkinter.Button(root, text="Klick mich", command=change_text)
-button.pack(expand=True)
+button_text = tkinter.Button(root, text="Klick mich", command=change_text)
+button_text.pack(expand=True)
+
+#knopf farbe ändern
+button_color = tkinter.Button(root, text="Farbe ändern", command=change_color)
+button_color.pack(expand=True)
 
 root.mainloop()                     #startet die schleife
